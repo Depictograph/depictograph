@@ -8,5 +8,7 @@ object Application extends Controller {
   def index = Action {
     Ok(views.html.Index())
   }
-  
+  def landing = Action { 
+    Ok(views.html.Landing())
+  }
 }
