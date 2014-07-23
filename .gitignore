@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Extracted from https://github.com/ulrich/macaron-factory/blob/master/.gitignore
 # Ignore all dotfiles...
 .*
@@ -16,8 +17,26 @@ project/project
 project/target
 target
 tmp
+=======
+# Ignore Play! working directory #
+bin/
+/db
+.eclipse
+/lib/
+/logs/
+/modules
+/project/project
+/project/target
+/target
+tmp/
+>>>>>>> ad9910274119792eda853ee763f1f46496f863d4
 test-result
 server.pid
 *.iml
 *.eml
+<<<<<<< HEAD
 activator-*.sbt
+=======
+/dist/
+.cache
+>>>>>>> ad9910274119792eda853ee763f1f46496f863d4
