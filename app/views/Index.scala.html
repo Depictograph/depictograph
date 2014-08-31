@@ -1,24 +1,87 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Depictograph Productions</title>
   <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("img/favicon.png")">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="@routes.Assets.versioned("css/bootstrap.css")">
   <link rel="stylesheet" href="@routes.Assets.versioned("css/app.css")">
   <script data-main="@routes.Assets.versioned("js/main.js")" src="@routes.Assets.versioned("lib/requirejs/require.js")"></script>
+  <script src="@routes.Assets.versioned("js/jquery-1.11.1.min.js")"></script>
+  <script src="@routes.Assets.versioned("js/bootstrap.js")"></script>
 </head>
-<body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
-	<div> 
-        <h1>This is angularjs app</h1>
+<body ng-controller="MainCtrl" class="dark">
+	<header class="header">
+    <div class="container">
+   <div class="row">
+        <div class="col-xs-12 col-md-6">
+              <div class="row">
+                <div class="col-xs-12 col-md-3">
+                  <img class="text-right" src="@routes.Assets.versioned("img/depictograph-light.png")">
+                </div>
+                <div class="col-xs-9 col-xs-offset-3 col-md-offset-0 text-left title">
+                  <h1 class="">Depictograph Productions</h1>
+                  <p class="text-muted">Depict Your World</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <ul class="list-inline list-unstyled">
+              <li><a href="#home" class="pictogram home "></a></li>
+              <li><a href="#about" class="pictogram about"></a></li>
+              <li><a href="#contact" class="pictogram contact"></a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!--   <section class="feature">
+    <div class="container">
+      <div class="col-xs-12">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+
+
+          <div class="carousel-inner">
+            <div class="item active">
+              <img class="" src="@routes.Assets.versioned("img/callofdoge.jpg")" alt="...">
+            </div>
+            <div class="item">
+              <img class="center-block" src="@routes.Assets.versioned("img/drawdoge.jpg")" alt="...">
+            </div>
+          </div>
+
+
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
+      </div>
     </div>
 
-  <div ng-view></div>
+  </section> -->
 
-  <div>Angular seed app: v<span app-version></span></div>
+
+
+  <section class="gallery">
+    <div class="container-fluid">
+      <div class="thumb" ng-repeat="photo in photos"> 
+        <a href="{{photo.link}}"><img ng-src="{{photo.src}}" class="{{photo.orient}}"/></a>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
