@@ -39,6 +39,7 @@ html * {
   position: fixed;
   z-index: 100;
   padding-bottom: 10px;
+  height: 100px;
 }
 
 .dark .header { 
@@ -55,7 +56,7 @@ html * {
 }
 
 .header img {
-  margin-top: 30px;
+  margin-top: 20px;
   height: 64px;
   width: 64px;
   text-align: center;
@@ -81,24 +82,32 @@ html * {
   color: #5d5d5d;
 }
 
-
-.thumb {
+.top-margin { 
+  padding-top: 120px;
+}
+/*.thumb {
   max-width: 300px; 
   max-height: 300px;
   margin: 10px 10px 10px 10px;
   overflow: hidden;
   display: inline-block;
   background-color:#ebebeb;
+}*/
+.thumb {
+  height: 225px;
+  margin: 10px 0;
+  display: inline-block;
+  background-color:#ebebeb;
 }
 
-.landscape { 
+/*.landscape { 
   position:relative; 
   right: 30%;
   bottom:20px;
-}
+}*/
 
 .gallery img {
-  min-width: 300px;
+  height: 225px;
   opacity: 1;
 }
 .gallery img:hover {
@@ -119,9 +128,17 @@ html * {
   font-size: 16px;
 }
 .container-fluid {
+  max-width: 90%;
+  min-width: 320px;
   text-align:center;
   margin: auto;
   border-bottom: 1px solid lightgray;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: stretch;
 
 }
 

@@ -44,11 +44,11 @@ require(['angular', './controllers', './directives', './filters', './services', 
             var img = data.data;
             for (var j=img.length-1; j >= 0; j--) {
                 var json = {}
+                    
+                json['link'] = img[j].images[0].source;
+                    
                 for (var i=0; i < img[j].images.length; i++) {         
-                    if ((img[j].images[i].width == 2048) || (img[j].images[i].height == 2048)) {
-                        json['link'] = img[j].images[i].source;
-                    }
-                    if ((img[j].images[i].width == 320) || (img[j].images[i].height == 320)) {
+                    if ((img[j].images[i].width == 225) || (img[j].images[i].height == 225)) {
                         json['src'] = img[j].images[i].source;
                     }
                     if (img[j].images[0].width > img[j].images[0].height) {
